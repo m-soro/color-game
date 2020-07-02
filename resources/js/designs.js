@@ -1,9 +1,9 @@
 let colors = generateRandomColors(6);
-
 let squares = document.querySelectorAll(".square");
 let pickedColor = pickColor();
 let colorDisplay = document.getElementById('colorDisplay');
 let messageDisplay = document.getElementById('message');
+let h1 = document.querySelector('h1');
 
 colorDisplay.textContent = pickedColor;
 
@@ -21,6 +21,7 @@ for(let i=0; i < squares.length; i++) {
     if (clickedColor === pickedColor) {
         messageDisplay.textContent = "Correct!"
         changeColors(clickedColor);
+        h1.style.backgroundColor = pickedColor;
         } else {
             this.style.backgroundColor = "#dfe6e9";
             messageDisplay.textContent = "Try Again!"
