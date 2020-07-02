@@ -60,5 +60,5 @@ function randomColor() {
     // pick a "green" from 0 to 255
     let g = Math.floor(Math.random() * 256)
     // synthesize to look follow the string format of rbg code
-    return `rgb(${r},${g},${b})`;
+    return `rgb(${r}, ${g}, ${b})`;
 }
