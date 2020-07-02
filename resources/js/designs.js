@@ -1,11 +1,4 @@
-let colors = [
-    "rgb(255, 0, 0)",
-    "rgb(255, 255, 0)",
-    "rgb(0, 255, 0)",
-    "rgb(0, 255, 255)",
-    "rgb(0, 0, 255)",
-    "rgb(255, 0, 255)",
-] // an array of colors to start with
+let colors = generateRandomColors(6);
 
 let squares = document.querySelectorAll(".square");
 let pickedColor = pickColor();
@@ -23,6 +16,8 @@ for(let i=0; i < squares.length; i++) {
     // grab color of clicked square
     let clickedColor = this.style.backgroundColor
     // compare to pickedColor using if/else
+    console.log(clickedColor, pickedColor);
+
     if (clickedColor === pickedColor) {
         messageDisplay.textContent = "Correct!"
         changeColors(clickedColor);
@@ -44,4 +39,26 @@ function changeColors(color) {
 function pickColor(){
     let random = Math.floor(Math.random() * colors.length);
     return colors[random];
+}
+
+function generateRandomColors(num) {
+    // make an array
+    let arr = []
+    // repeat num times
+    for(let i=0; i < num; i++) {
+    // get random color and push into arr
+    arr.push(randomColor())
+    }
+    // return that array
+    return arr;
+}
+function randomColor() {
+    // pick a "red" from 0 to 255
+    let r = Math.floor(Math.random() * 256)
+    // pick a "blue" from 0 to 255
+    let b = Math.floor(Math.random() * 256)
+    // pick a "green" from 0 to 255
+    let g = Math.floor(Math.random() * 256)
+    // synthesize to look follow the string format of rbg code
+    return `rgb(${r},${g},${b})`;
 }
