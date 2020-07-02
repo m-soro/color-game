@@ -14,3 +14,9 @@ body {
     width:600px;
     margin: 0 auto;
 }
+
+#bar {
+    background: #bdc3c7;
+    height: 30px;
+    text-align: center;
+}
