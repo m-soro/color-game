@@ -17,7 +17,7 @@ easyBtn.addEventListener('click', function(){
     // hide the bottom three
     for(let i=0; i < squares.length; i++) {
         if(colors[i]) {
-            
+
         }
     }
 });
@@ -39,7 +39,7 @@ resetButton.addEventListener("click", function() {
     for(let i=0; i < squares.length; i++) {
         // change each square to match the correct color.
         squares[i].style.backgroundColor = colors[i];
-    h1.style.backgroundColor = "#dfe6e9";
+    h1.style.backgroundColor = "steelblue";
     }
 });
 colorDisplay.textContent = pickedColor;
