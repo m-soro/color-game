@@ -61,7 +61,7 @@ for(let i=0; i < squares.length; i++) {
         changeColors(clickedColor);
         h1.style.backgroundColor = pickedColor;
         } else {
-            this.style.backgroundColor = "#dfe6e9";
+            this.style.backgroundColor = "#232323";
             messageDisplay.textContent = "Try Again!"
         }
     });
