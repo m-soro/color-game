@@ -1,1 +1,3 @@
-# Color game - code along project 
+# Color game - a code along project
+
+
